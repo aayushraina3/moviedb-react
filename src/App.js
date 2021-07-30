@@ -2,30 +2,30 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SearchBar from './components/SearchBar';
-import MovieCard from './components/MovieCard';
+import Movies from './components/Movies';
 
 export default class App extends Component {
   state = {
-    error: null,
-    searchList: [],
+    //error: null,
+    //searchList: [],
     searchTerm: ""
   }
 
-  handleSearch = (searchResults) => {
+  handleSearch = (searchTerm) => {
     this.setState({
-      ...this.state,
+      //...this.state,
       //searchList: searchResults
-      searchTerm: searchResults
+      searchTerm: searchTerm
     })
   }
 
   render() {
     console.log(this.state);
-    
+
     return (
       <>
         <SearchBar onSearch={this.handleSearch} />
-        <MovieCard />
+        <Movies searchTerm={this.state.searchTerm}/>
       </>
     )
   }

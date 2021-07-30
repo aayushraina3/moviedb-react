@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-export default function MovieCard() {
+export default function MovieCard(props) {
+
+    console.log(props.info);
     return (
         <div>
             <Card className="movie-card">
