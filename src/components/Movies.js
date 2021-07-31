@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import MovieCard from './MovieCard';
 
 export default class Movies extends Component {
@@ -32,22 +33,27 @@ export default class Movies extends Component {
             )
     }
 
-    displayMovies = () => {
-        if (this.state.searchList) {
-            this.state.searchList.forEach(info => {
-                <MovieCard info={info} />
-            })
-        }
-    }
-
     render() {
-        //console.log(this.props.searchTerm)
-        console.log(this.state)
+        const { searchList } = this.state
 
-        return (
-            <div>
-                {this.displayMovies()}
-            </div>
-        )
+        if (searchList && this.props.searchTerm.length >= 3) {
+            return (
+                <Container>
+                    <Row>
+                        {searchList.map((search, index) => {
+                            return (
+                                <Col>
+                                    <MovieCard key={index} search={search} />
+                                </Col>
+                            )
+                        })}
+                    </Row>
+                </Container>
+            )
+        } else {
+            return (
+                <div></div>
+            )
+        }
     }
 }
