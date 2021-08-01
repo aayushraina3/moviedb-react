@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/levishelby/moviedb-react/static/css/main.541fdeb3.chunk.css",
+    "main.js": "/levishelby/moviedb-react/static/js/main.4ab8da82.chunk.js",
+    "main.js.map": "/levishelby/moviedb-react/static/js/main.4ab8da82.chunk.js.map",
+    "runtime-main.js": "/levishelby/moviedb-react/static/js/runtime-main.8cc7c900.js",
+    "runtime-main.js.map": "/levishelby/moviedb-react/static/js/runtime-main.8cc7c900.js.map",
+    "static/css/2.4be38407.chunk.css": "/levishelby/moviedb-react/static/css/2.4be38407.chunk.css",
+    "static/js/2.5580f498.chunk.js": "/levishelby/moviedb-react/static/js/2.5580f498.chunk.js",
+    "static/js/2.5580f498.chunk.js.map": "/levishelby/moviedb-react/static/js/2.5580f498.chunk.js.map",
+    "static/js/3.910b79c2.chunk.js": "/levishelby/moviedb-react/static/js/3.910b79c2.chunk.js",
+    "static/js/3.910b79c2.chunk.js.map": "/levishelby/moviedb-react/static/js/3.910b79c2.chunk.js.map",
+    "index.html": "/levishelby/moviedb-react/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/levishelby/moviedb-react/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.541fdeb3.chunk.css.map": "/levishelby/moviedb-react/static/css/main.541fdeb3.chunk.css.map",
+    "static/js/2.5580f498.chunk.js.LICENSE.txt": "/levishelby/moviedb-react/static/js/2.5580f498.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cc7c900.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.5580f498.chunk.js",
+    "static/css/main.541fdeb3.chunk.css",
+    "static/js/main.4ab8da82.chunk.js"
+  ]
+}
