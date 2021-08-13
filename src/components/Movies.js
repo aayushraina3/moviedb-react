@@ -4,6 +4,7 @@ import MovieCard from './MovieCard';
 
 export default class Movies extends Component {
     state = {
+        isLoading: false,
         searchList: [],
         error: null
     }
@@ -16,6 +17,7 @@ export default class Movies extends Component {
         //console.log(this.props.searchTerm);
 
         if (prevProps.searchTerm !== this.props.searchTerm && this.props.searchTerm.length >= 3) {
+            this.setState({ isLoading: true, searchList: [], error: null });
             this.fetchMovies();
         }
     }
@@ -25,7 +27,7 @@ export default class Movies extends Component {
             .then(res => res.json())
             .then(
                 (result) => {
-                    this.setState({ searchList: result.Search })
+                    this.setState({ searchList: result.Search, isLoading: false })
                 },
                 (error) => {
                     this.setState({ error })
@@ -36,22 +38,40 @@ export default class Movies extends Component {
     render() {
         const { searchList } = this.state
 
-        if (searchList && this.props.searchTerm.length >= 3) {
-            return (
-                <Container>
-                    <Row>
-                        {searchList.map((search, index) => {
-                            return (
-                                <Col>
-                                    <MovieCard key={index} search={search} />
-                                </Col>
-                            )
-                        })}
-                    </Row>
-                </Container>
-            )
+        if (this.props.searchTerm.length >= 3) {    //searchList && - ensured searchList is not empty
+            if (searchList) {
+                return (
+                    <Container>
+                        <Row>
+                            {searchList.map((search, index) => {
+                                return (
+                                    <Col md={3} key={index}>
+                                        <MovieCard search={search} /> {/* key={index} */}
+                                    </Col>
+                                )
+                            })}
+                        </Row>
+                    </Container>
+                )
+            } else {
+
+                if (this.state.isLoading === true) {
+                    return (
+                        <div>
+                            Loading...
+                        </div>
+                    )
+                } else {
+                    return (
+                        <div>
+                            No results found! Type something else.
+                        </div>
+                    )
+                }
+            }
         } else {
             return (
+                // <div>Search something :)</div>
                 <div></div>
             )
         }

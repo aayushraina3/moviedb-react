@@ -8,18 +8,22 @@ export default class SearchBar extends Component {
 
     render() {
         return (
-            <InputGroup className="mb-3">
-                <FormControl
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-bar"
-                    name="SearchVal"
-                    onChange={this.handleInputChange}
-                />
-                {/* <Button variant="outline-secondary" id="button-addon2">
+            <div className="search-section">
+                <div className="search-bar-div">
+                    <InputGroup className="mb-3 search-bar">
+                        <FormControl
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="search-bar"
+                            name="SearchVal"
+                            onChange={this.handleInputChange}
+                        />
+                        {/* <Button variant="outline-secondary" id="button-addon2">
                     Button
                 </Button> */}
-            </InputGroup>
+                    </InputGroup>
+                </div>
+            </div>
         )
     }
 }

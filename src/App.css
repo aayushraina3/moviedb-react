@@ -3,11 +3,43 @@
   --card-font-primary: #fff;
 }
 
+#root {
+  /* height: 100%; */ min-height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.search-section{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-div{
+  background-color: rgb(175, 165, 165);
+  width: 95%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.search-bar{
+  width: 90%;
+}
+
 .movie-card{
   background: var(--card-bg);
-  width: 300px;
-  height: 600px;
+  width: 200px;
+  height: 400px;
   color: var(--card-font-primary);
+  margin-bottom: 10px;
 }
 
 .card-banner{
@@ -17,4 +49,15 @@
 
 .card-body{
   height: 30%;
+}
+
+.card-title{
+  font-size: 14px;
+}
+
+.card-button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 25% 10px 0;
 }
