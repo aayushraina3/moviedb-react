@@ -23,7 +23,7 @@ export default class Movies extends Component {
     }
 
     fetchMovies = () => {
-        fetch(`http://www.omdbapi.com/?apikey=aea3bc9d&s=${this.props.searchTerm}`)
+        fetch(`https://www.omdbapi.com/?apikey=aea3bc9d&s=${this.props.searchTerm}`)
             .then(res => res.json())
             .then(
                 (result) => {

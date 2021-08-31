@@ -10,9 +10,13 @@ export default function MovieCard(props) {
                     <Card.Title className="card-title">{props.search.Title}</Card.Title>
                     <Card.Text>
                     </Card.Text>
-                    <Button className="card-button" variant="danger">Read More</Button>
+                    <Button onClick={inProgress} className="card-button" variant="danger">Read More</Button>
                 </Card.Body>
             </Card>
         </div>
     );
+}
+
+function inProgress(){
+    alert("Under progress!");
 }

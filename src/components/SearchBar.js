@@ -4,6 +4,8 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 export default class SearchBar extends Component {
     handleInputChange = (event) => {
         this.props.onSearch(event.target.value)
+
+        // if(event.target.value) 
     }
 
     render() {
@@ -21,6 +23,7 @@ export default class SearchBar extends Component {
                         {/* <Button variant="outline-secondary" id="button-addon2">
                     Button
                 </Button> */}
+                        <FormControl.Feedback as="div">Type something to search.</FormControl.Feedback>
                     </InputGroup>
                 </div>
             </div>
